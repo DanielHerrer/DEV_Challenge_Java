@@ -12,7 +12,6 @@ public class QueryPromedio {
     public String toString() {
         return "" +
                 "\n Nombre='" + nombre + '\'' +
-
                 "\n Apellido='" + apellido + '\'' +
                 "\n Telefono='" + telefono + '\'' +
                 "\n Email='" + email + '\'' +

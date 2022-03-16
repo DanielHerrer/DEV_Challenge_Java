@@ -51,7 +51,7 @@ public class Password {
                 cNum ++;
             }else if(Character.isLowerCase(caracter)){
                 cMinusc ++;
-            }else {                     //Al llegar a este else el caracter fue Mayuscula
+            }else {                     //Al llegar a este else el caracter es Mayuscula
                 cMayusc ++;
             }
         }

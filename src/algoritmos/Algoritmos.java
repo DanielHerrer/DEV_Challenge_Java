@@ -58,34 +58,33 @@ public class Algoritmos {
             }
         }while(salir!=1);
         entrada.close();
-        System.out.println("");
         System.out.println("Finalizando programa. Hasta pronto.");
         System.exit(0);
     }
 
     // 1. Corroborar numero primo.
     public void numeroPrimo(){
-        int numero, bandera = 1, divisor = 2;
+        int numero, primo = 1, divisor = 2;
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Por favor, ingrese un numero: ");
         numero = entrada.nextInt();
 
         if(numero == 0 || numero == 1 || numero == 2){
-            bandera = 0;
+            primo = 0;
         }
 
-        while ((bandera == 1) && (divisor!=numero)){
+        while ((primo == 1) && (divisor!=numero)){
             if(numero % divisor == 0) {     // Si el resto de la division entre el (numero ingresado) y el (divisor) es igual a 0 entonces es par
-                bandera = 0;
+                primo = 0;
             }
             divisor++;                      // Sino el divisor incrementara hasta llegar al numero ingresado demostrando ser primo
         }
 
-        if(bandera == 0) {
+        if(primo == 0) {
             System.out.println("");
             System.out.println(FONT_RED+"El numero no es primo."+FONT_RESET);
-        }else if(bandera == 1){
+        }else if(primo == 1){
             System.out.println("");
             System.out.println(FONT_GREEN+"El numero es primo."+FONT_RESET);
         }
@@ -166,7 +165,7 @@ public class Algoritmos {
     // 4. Encontrar numero aleatorio.
     public void numeroAleatorio(){
         int aleatorio = (int) (Math.random() * 1000);
-        int numero;               //Asignamos el valor -1 para que no haya problemas si se llega a generar un numero aleatorio igual a 0
+        int numero;
 
         do{
             System.out.print("Escriba por teclado un número del 0 al 1000 : ");
@@ -195,6 +194,9 @@ public class Algoritmos {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Integer> lista = new ArrayList<Integer>();    //Generamos una lista Integer
 
+        System.out.println("Ingrese un -1 para terminar.");
+        System.out.println("");
+
         do{
             System.out.print("Ingrese su numero: ");
             num = entrada.nextInt();
@@ -208,14 +210,17 @@ public class Algoritmos {
         sumaTotal = getTotal(lista);
         suma = numMayor + numMenor + sumaTotal;
 
-        System.out.println("El numero mas grande fue: "+numMayor);
-        System.out.println("El numero mas bajo fue: "+numMenor);
-        System.out.println("La suma de todos los numeros ingresados es: "+sumaTotal);
-        System.out.println("La suma de los numeros enlistados es: "+suma);
+        System.out.println("");
+        System.out.println("---------------------------------------");
+        System.out.println("El numero mas "+FONT_YELLOW+"grande"+FONT_RESET+" fue: "+numMayor);
+        System.out.println("El numero mas "+FONT_CYAN+"bajo"+FONT_RESET+" fue: "+numMenor);
+        System.out.println("La suma de "+FONT_RED+"todos los numeros ingresados"+FONT_RESET+" es: "+sumaTotal);
+        System.out.println("La suma de "+FONT_GREEN+"los numeros enlistados"+FONT_RESET+" es: "+suma);
+        System.out.println("---------------------------------------");
 
     }
 
-    // Este metodo forma parte de numAcumulativo()
+    // Esta funcion forma parte de numAcumulativo()
     private int getMayor(ArrayList<Integer> lista){
         int numMayor = 0;
 
@@ -227,7 +232,7 @@ public class Algoritmos {
         return numMayor;
     }
 
-    // Este metodo forma parte de numAcumulativo()
+    // Esta funcion forma parte de numAcumulativo()
     private int getMenor(ArrayList<Integer> lista){
         int numMenor = lista.get(0);
 
@@ -239,7 +244,7 @@ public class Algoritmos {
         return numMenor;
     }
 
-    // Este metodo forma parte de numAcumulativo()
+    // Esta funcion forma parte de numAcumulativo()
     private int getTotal(ArrayList<Integer> lista){
         int sumaTotal = 0;
 

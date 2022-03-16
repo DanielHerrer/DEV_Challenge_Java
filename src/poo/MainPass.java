@@ -31,7 +31,6 @@ public class MainPass{
             System.out.println("");
             System.out.print("Elija la operacion que desea: ");
             operacion = entrada.nextInt();
-            System.out.println("");
             System.out.println(FONT_PURPLE+"*************************************************"+FONT_RESET);
             System.out.println("");
 
@@ -71,5 +70,8 @@ public class MainPass{
                     break;
             }
         }while(salir!=1);
+        entrada.close();
+        System.out.println("Finalizando programa. Hasta pronto.");
+        System.exit(0);
     }
 }
