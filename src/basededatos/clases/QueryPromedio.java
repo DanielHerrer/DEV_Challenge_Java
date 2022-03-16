@@ -11,12 +11,12 @@ public class QueryPromedio {
     @Override
     public String toString() {
         return "" +
-                "\n Nombre='" + nombre + '\'' +
-                "\n Apellido='" + apellido + '\'' +
-                "\n Telefono='" + telefono + '\'' +
-                "\n Email='" + email + '\'' +
-                "\n Puesto='" + puesto + '\'' +
-                "\n Municipalidad='" + nombreM + '\'' +
+                "\n Nombre: '" + nombre + '\'' +
+                "\n Apellido: '" + apellido + '\'' +
+                "\n Telefono: '" + telefono + '\'' +
+                "\n Email: '" + email + '\'' +
+                "\n Puesto: '" + puesto + '\'' +
+                "\n Municipalidad: '" + nombreM + '\'' +
                 "\n------------------------------------------------------";
     }
 
